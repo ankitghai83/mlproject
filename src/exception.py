@@ -1,5 +1,6 @@
 import sys
 import logging
+from src.logger import logging
 # error : error we are getting during the flow
 # error_details:it is there in sys
 # exc_info() talking about execution info _,_,exc_tb=error_detail.exc_info() . 3rd variable is all m intrested in like error in which file & line#
@@ -26,5 +27,5 @@ class CustomException(Exception):
         a=1/0
     except Exception as e:
         logging.info("Divide by Zero Error")
-        raise CustomException(e,sys)'''
-        
+        raise CustomException(e,sys)
+        '''
