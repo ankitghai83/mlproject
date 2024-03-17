@@ -1,5 +1,4 @@
 import sys
-import logging
 from src.logger import logging
 # error : error we are getting during the flow
 # error_details:it is there in sys
@@ -21,11 +20,11 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
-
-'''if  __name__=="__main__":
+''' 
+if  __name__=="__main__":
     try:
         a=1/0
     except Exception as e:
         logging.info("Divide by Zero Error")
-        raise CustomException(e,sys)
-        '''
+        raise CustomException(e,sys)'''
+        
