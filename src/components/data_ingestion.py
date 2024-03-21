@@ -7,6 +7,9 @@ import pandas as pd # need to work with dataframe
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass # Used to create class variable
 
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+
 
 # Any input required by the data ingestion component like saving raw data , saving Test & Train data will be given here. Output of data ingestion
 # config class will be like numpy array or file saved at location.
@@ -56,7 +59,9 @@ class DataIngestion:
       
 if __name__=="__main__":
     obj=DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data,test_data=obj.initiate_data_ingestion()
+    data_transformation=DataTransformation()
+    data_transformation.initiate_data_transformation(train_data,test_data)
              
          
 
